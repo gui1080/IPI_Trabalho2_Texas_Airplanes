@@ -24,7 +24,9 @@ def pares_filtragem_Notch(imagem, numero_pares, dzero, k, l):
     return Hm * HM
 
 def Notch_Filter(imagem, numero_pares):
-
+# frequencioa de H(u, v) deve estar a certa fração de seu máximo
+# No caso, a imagem é de 720x720
+# D0 = cutoff frequency, se H(u, v) = D0, então o filtro esta a 0,667 do valor máximo
 
 
     return final
