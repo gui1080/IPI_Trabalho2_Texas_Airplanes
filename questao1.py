@@ -1,3 +1,6 @@
+# Aluno: Guilherme Braga Pinto
+# 17/1062290
+
 import numpy as np
 import cv2
 import glob
@@ -80,3 +83,10 @@ cv2.imwrite("imagem_colorida_com_Cr_corrigido.bmp", aux_imagem_Cr)
 # -------------------------------------------Cb-------------------------------------------
 # corrigir ---> Crominance
 # Frequencia indesejada
+
+# Transformada de Fourier no Cb em 2 dimensões, por isso o .fft2
+imagem_Fourier = np.fft.fft2(aux_imagem[:, :, 1])
+# Mudamos o componente de frequência 0 para o centro do espectro
+imagem_Fourier_trocada = np.fft.fftshift(imagem_Fourier)
+
+# Filtragem Notch

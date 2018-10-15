@@ -1,3 +1,6 @@
+# Aluno: Guilherme Braga Pinto
+# 17/1062290
+
 import numpy as np
 
 def rgb_para_ycbcr(imagem):
