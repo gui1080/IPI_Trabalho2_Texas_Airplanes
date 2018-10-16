@@ -1,8 +1,13 @@
 # IPI_Trabalho2_Texas_Airplanes
+
 Introdução ao Processamento de Imnagens, Prof. Zaghetto, (2/2018)
+
 Universidade de Brasília
+
 Feito por Guilherme Braga Pinto
+
 17/0162290
+
 Data de Entrega: 31 de Outubro de 2018
 
 # Primeira parte da tarefa
