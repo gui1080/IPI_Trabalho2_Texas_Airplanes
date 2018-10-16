@@ -12,7 +12,8 @@ from ycbcr_rgb import ycbcr_para_rgb
 from pixel_vizinho import pega_pixel
 from filtragem_Notch import Notch_Filter
 
-# o endereço do meu diretório de imagens
+# o endereço do meu diretório de imagens quando estava trabalhando no código no meu Windows 10
+# este caminho deverá ser atualizado para ser rodado em outra maquina 
 path="C:\\Users\\Guilherme Braga\\Desktop\\trab2\\ipi2\\*.bmp"
 
 # leio todas as imagens
