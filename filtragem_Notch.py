@@ -5,7 +5,7 @@ import numpy as np
 
 def pares_filtragem_Notch(imagem, numero_pares, dzero, k, l):
 
-    height, width, channels = imagem.shape
+    height, width = imagem.shape
 
     HM = np.ones((height, width), dtype=np.float16)
     Hm = np.ones((height, width), dtype=np.float16)
@@ -24,9 +24,14 @@ def pares_filtragem_Notch(imagem, numero_pares, dzero, k, l):
     return Hm * HM
 
 def Notch_Filter(imagem, numero_pares):
-# frequencioa de H(u, v) deve estar a certa fração de seu máximo
-# No caso, a imagem é de 720x720
-# D0 = cutoff frequency, se H(u, v) = D0, então o filtro esta a 0,667 do valor máximo
-
+    # frequencioa de H(u, v) deve estar a certa fração de seu máximo
+    # No caso, a imagem é de 720x720
+    # D0 = cutoff frequency, se H(u, v) = D0, então o filtro esta a 0,667 do valor máximo
+    final = pares_filtragem_Notch(imagem, numero_pares, 15, 73.29, 73.528)
+    final = final * pares_filtragem_Notch(imagem, numero_pares, 15, -73.29, 73.528)
+    final = final * pares_filtragem_Notch(imagem, numero_pares, 5, 218.844, 73.528)
+    final = final * pares_filtragem_Notch(imagem, numero_pares, 5, -218.844, 73.528)
+    final = final * pares_filtragem_Notch(imagem, numero_pares, 5, 72.719, 219.47)
+    final = final * pares_filtragem_Notch(imagem, numero_pares, 5, -72.719, 219.47)
 
     return final

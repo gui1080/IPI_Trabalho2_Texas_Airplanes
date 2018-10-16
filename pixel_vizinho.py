@@ -5,7 +5,7 @@ import numpy as np
 
 def pega_pixel(imagem, i, j):
 
-    pix = []
+    blue = []
 
 # o "append" em Python basicamente adiciona ao final da lista apenas 1 elemento por vez
 # no caso, "i" e "j" são coordenadas na imagem. No programa principal, chamaos o .sort
@@ -29,13 +29,13 @@ def pega_pixel(imagem, i, j):
 # G = [X+1 / Y]
 # H = [X+1 / Y+1]
 
-    pix.append(imagem[i + 1, j - 1])
-    pix.append(imagem[i, j - 1])
-    pix.append(imagem[i - 1, j - 1])
-    pix.append(imagem[i + 1, j])
-    pix.append(imagem[i - 1, j])
-    pix.append(imagem[i, j])
-    pix.append(imagem[i + 1, j + 1])
-    pix.append(imagem[i, j + 1])
-    pix.append(imagem[i - 1, j + 1])
-    return pix
+    blue.append(imagem[i - 1, j + 1])
+    blue.append(imagem[i, j + 1])
+    blue.append(imagem[i + 1, j + 1])
+    blue.append(imagem[i - 1, j])
+    blue.append(imagem[i, j])
+    blue.append(imagem[i + 1, j])
+    blue.append(imagem[i - 1, j - 1])
+    blue.append(imagem[i, j - 1])
+    blue.append(imagem[i + 1, j - 1])
+    return blue
