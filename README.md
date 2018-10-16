@@ -12,13 +12,13 @@ No arquivo "questao1.py", utilizou-se das 100 imagens disponíveis para corrigir
 
 Módulos com as funções utilizadas:
 
-pixel_vizinho.py
+-pixel_vizinho.py
 
-filtragem_Notch.py
+-filtragem_Notch.py
 
-rgb_ycbcr.py
+-rgb_ycbcr.py
 
-ycbcr_rgb.py
+-ycbcr_rgb.py
 
 
 # Segunda parte da tarefa
