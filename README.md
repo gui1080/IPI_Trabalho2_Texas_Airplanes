@@ -1,6 +1,6 @@
-# IPI_Trabalho2_Texas_Airplanes
+# IPI- Trabalho2
 
-Introdução ao Processamento de Imnagens, Prof. Zaghetto, (2/2018)
+Introdução ao Processamento de Imagens, Prof. Zaghetto, (2/2018)
 
 Universidade de Brasília
 
