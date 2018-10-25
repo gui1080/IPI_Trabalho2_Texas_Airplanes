@@ -32,7 +32,7 @@ print("Imagem lida com sucesso!")
 aviao_exemplo = imagem_ycbcr[601:610, 521:504, 0]
 altura_aviao, largura_aviao, channels_aviao = imagem_ycbcr.shape
 
-for y in range(altura - altura_aviao):
-    for x in range(largura - largura_aviao):
-        if correlation(imagem_ycbcr[y:y+altura_aviao, x:x+largura_aviao], aviao_exemplo) == 0:
-            print("ZAP")
+for y in range(altura):
+    for x in range(largura):
+        k = correlation(imagem_ycbcr[y:y+altura_aviao, x:x+largura_aviao], aviao_exemplo, altura_aviao, largura_aviao)
+        print(k)
