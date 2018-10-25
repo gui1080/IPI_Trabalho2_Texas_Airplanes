@@ -13,7 +13,7 @@ from pixel_vizinho import pega_pixel
 from filtragem_Notch import Notch_Filter
 
 # Este é o endereço do meu diretório de imagens quando estava trabalhando no código na minha máquina com Windows 10
-# este caminho deverá ser atualizado para ser rodado em outro PC, com o caminho onde as imagens se encontram  
+# este caminho deverá ser atualizado para ser rodado em outro PC, com o caminho onde as imagens se encontram
 path="C:\\Users\\Guilherme Braga\\Desktop\\trab2\\ipi2\\*.bmp"
 
 # leio todas as imagens
@@ -99,6 +99,10 @@ imagem_Fourier = np.fft.fft2(aux_imagem[:, :, 1])
 # Mudamos o componente de frequência 0 para o centro do espectro
 imagem_Fourier_trocada = np.fft.fftshift(imagem_Fourier)
 
+# espectro = 26 * np.log(np.abs(imagem_Fourier_trocada))
+# cv2.imwrite("freq.bmp",espectro)
+
+
 # Filtragem Notch
 imagem_Fourier_fim = Notch_Filter(imagem_Fourier_trocada, 3)
 temporario = imagem_Fourier_trocada * imagem_Fourier_fim
@@ -121,7 +125,7 @@ for i in range(1, largura):
 aux_imagem[:, :, 1] = auxiliar_com_borda[1:-1, 1:-1]
 
 # Agora passamos a imagem auxiliar com as devidas correções para RGB
-# Salvamos a imagem como "imagem_final.bmp", a usaremos na segunda parte do trabalho  
+# Salvamos a imagem como "imagem_final.bmp", a usaremos na segunda parte do trabalho
 ycbcr_para_rgb(aux_imagem)
 cv2.imwrite("imagem_final.bmp", aux_imagem)
 print("Imagens corrigidas!")
