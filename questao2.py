@@ -1,5 +1,5 @@
 # Aluno: Guilherme Braga Pinto
-# 17/1062290
+# 17/0162290
 
 import numpy as np
 import cv2
@@ -7,7 +7,7 @@ import copy
 
 from rgb_ycbcr import rgb_para_ycbcr
 from ycbcr_rgb import ycbcr_para_rgb
-from normalized_cross_corelation import correlation
+from normalized_cross_correlation import correlation
 
 # leio a imagem final
 imagem_de_trabalho = cv2.imread("imagem_final.bmp")
@@ -36,3 +36,6 @@ for y in range(altura):
     for x in range(largura):
         k = correlation(imagem_ycbcr[y:y+altura_aviao, x:x+largura_aviao], aviao_exemplo, altura_aviao, largura_aviao)
         print(k)
+        # se [k > (um coeficiente de tolerância escolhido arbitrariamente)]
+        # dado que quanto mais perto de 1, mais alta é a semelhança entre os pixels
+        # então achamos um avião

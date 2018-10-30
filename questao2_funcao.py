@@ -1,5 +1,7 @@
 # Aluno: Guilherme Braga Pinto
-# 17/1062290
+# 17/0162290
+
+# OBS2- Fiz esse codigo usando "cv2.matchTemplate" para estudo da biblioteca Opencv, apenas.
 
 import cv2
 import numpy as np
