@@ -27,3 +27,5 @@ Módulos com as funções utilizadas:
 
 
 # Segunda parte da tarefa
+
+Normalized Cross Correlation para encontrar os aviões na imagem
